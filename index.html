@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Home - Aidan Scesny</title>
+  <meta name="description" content="System Administrator | Systems Developer | Server Architect">
+  <link rel="canonical" href="https://aidanscesny.com/">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Home - Aidan Scesny">
+  <meta property="og:description" content="Projects, notes, and contact">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aidanscesny.com/">
+  <!-- <meta property="og:image" content="https://aidanscesny.com/og.png"> -->
+  <!-- <meta name="twitter:card" content="summary_large_image"> -->
+
+  <!-- Favicons (serve tiny, cached forever) -->
+  <link rel="icon" href="/favicon.ico">
+
+  <!-- Minimal, critical CSS -->
+  <style>
+    :root {
+      --bg: #ffffff; --fg: #0b0b0c; --muted:#6b7280; --link:#0a58ca; --card:#f7f7f8; --border:#e5e7eb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#0b0b0c; --fg:#e5e7eb; --muted:#9aa0aa; --link:#7abaff; --card:#141417; --border:#22242a; }
+    }
+    * { box-sizing:border-box }
+    html:focus-within { scroll-behavior: smooth; }
+    body {
+      margin:0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif;
+      background:var(--bg); color:var(--fg);
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+    header { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; }
+    h1 { font-size: clamp(1.5rem, 2.5vw + 1rem, 2.25rem); margin: 0 0 8px }
+    .tag { color:var(--muted); margin:0 }
+    nav { margin-top: 10px; display:flex; gap:14px; flex-wrap:wrap }
+    nav a { text-decoration:none; border:1px solid var(--border); padding:6px 10px; border-radius:8px; }
+    nav a:focus, nav a:hover { outline:0; border-color:var(--link); }
+    a { color: var(--link) }
+    .grid { display:grid; gap:12px; margin-top: 22px }
+    .card {
+      border:1px solid var(--border); background:var(--card); border-radius:12px; padding:14px 16px;
+    }
+    .card h3 { margin:0 0 6px; font-size:1.05rem }
+    .muted { color: var(--muted) }
+    footer { margin-top:28px; border-top:1px solid var(--border); padding-top:16px; color:var(--muted); font-size:0.95rem }
+    .skip-link { position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+    .skip-link:focus { position:static; width:auto; height:auto; padding:6px 10px; background:var(--card); border:1px solid var(--border); border-radius:8px; }
+  </style>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Aidan Scesny",
+    "url":"https://aidanscesny.com/",
+    "jobTitle":"Systems Administrator",
+    "knowsAbout":["DevOps","Linux","Containers","CI/CD","C/C++"],
+    "sameAs":["https://github.com/aidanscesny","https://www.linkedin.com/in/aidan-scesny-318664219/"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <div class="wrap" id="content">
+    <header>
+      <div>
+        <h1>Aidan Scesny</h1>
+        <p class="tag">System Administrator progressing into <strong>Development</strong> & <strong>Engineering</strong>.</p>
+        <nav aria-label="Primary">
+          <a href="/resume.pdf">Résumé</a>
+          <a href="/projects/">Projects</a>
+          <a href="/notes/">Notes</a>
+          <a href="mailto:a.scesny@att.net">Contact</a>
+          <a href="https://github.com/aidanscesny">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="grid" aria-labelledby="projects">
+      <h2 id="projects" class="visually-hidden" style="position:absolute;left:-9999px">Featured Projects</h2>
+
+      <article class="card">
+        <h3><a href="/projects/homelab/">Homelab as Code</a></h3>
+        <p class="muted">TBD <span>TDB Span</span></p>
+      </article>
+
+      <article class="card">
+        <h3><a href="/projects/ci-pipeline/">Tiny CI Pipeline</a></h3>
+        <p class="muted">TBD</p>
+      </article>
+
+      <article class="card">
+        <h3><a href="/projects/fast-index/">This page</a></h3>
+        <p class="muted">No JS, no build, 1 request, sub-10 KB, 100/100 Lighthouse.</p>
+      </article>
+    </section>
+
+    <footer>
+      <p>© <span id="y">2025</span> Aidan Scesny // Fast by design. Built with plain HTML & CSS.</p>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
